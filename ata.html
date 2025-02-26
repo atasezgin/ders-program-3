@@ -9,15 +9,19 @@
             margin: 0;
             padding: 20px;
             background-color: #000000; /* Siyah */
-            height: 100vh;
+            min-height: 100vh; /* Mobil için min-height kullanıyoruz */
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
+            box-sizing: border-box; /* Padding taşmasını önler */
         }
         h1 {
             color: #fff;
             text-align: center;
+            margin: 0;
+            padding: 10px;
+            word-wrap: break-word; /* Uzun kelimeler mobilde kırılsın */
         }
         .back-button {
             position: absolute;
@@ -36,16 +40,20 @@
             transform: scale(1.05);
         }
 
-        /* Mobil uyumluluk */
+        /* Mobil uyumluluk için medya sorguları */
         @media (max-width: 600px) {
+            body {
+                padding: 10px; /* Küçük ekranlarda padding azalır */
+            }
             h1 {
-                font-size: 20px; /* Küçük ekranlarda yazı küçülür */
+                font-size: 18px; /* Başlık mobil için küçülür */
+                padding: 5px;
             }
             .back-button {
-                padding: 8px 15px;
+                padding: 8px 15px; /* Buton küçülür */
                 font-size: 14px;
-                top: 10px;
-                left: 10px;
+                top: 10px; /* Üst mesafe azalır */
+                left: 10px; /* Sol mesafe azalır */
             }
         }
     </style>
