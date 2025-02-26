@@ -2,6 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobil uyumluluk için -->
     <title>Ata'nın Ders Programı</title>
     <style>
         body {
@@ -33,6 +34,19 @@
         }
         .back-button:hover {
             transform: scale(1.05);
+        }
+
+        /* Mobil uyumluluk */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px; /* Küçük ekranlarda yazı küçülür */
+            }
+            .back-button {
+                padding: 8px 15px;
+                font-size: 14px;
+                top: 10px;
+                left: 10px;
+            }
         }
     </style>
 </head>
