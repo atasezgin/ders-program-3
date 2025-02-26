@@ -2,69 +2,163 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobil uyumluluk için -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ata'nın Ders Programı</title>
     <style>
         * {
-            box-sizing: border-box; /* Tüm elemanlarda taşma önlenir */
+            box-sizing: border-box;
         }
         body {
             margin: 0;
-            padding: 15px; /* Daha küçük padding */
+            padding: 15px;
             background-color: #000000; /* Siyah */
-            min-height: 100vh; /* Mobil için esnek yükseklik */
+            min-height: 100vh;
             display: flex;
-            flex-direction: column; /* İçerik dikey sıralansın */
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             position: relative;
-            font-family: Arial, sans-serif; /* Daha okunaklı font */
-        }
-        h1 {
-            color: #fff;
-            text-align: center;
-            margin: 0;
-            padding: 10px 0;
-            font-size: 24px; /* Varsayılan boyutta küçülttüm */
-            word-wrap: break-word; /* Uzun metinler kırılsın */
+            font-family: Arial, sans-serif;
         }
         .back-button {
             position: absolute;
-            top: 10px; /* Mobil için daha yakın */
+            top: 10px;
             left: 10px;
-            padding: 8px 16px; /* Daha kompakt */
+            padding: 8px 16px;
             background-color: #333333;
             color: #fff;
             text-decoration: none;
-            border-radius: 12px; /* Biraz daha küçük yuvarlaklık */
-            font-size: 14px; /* Mobil için uygun font */
+            border-radius: 12px;
+            font-size: 14px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease;
         }
         .back-button:hover {
             transform: scale(1.05);
         }
+        table {
+            width: 100%;
+            max-width: 900px;
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+        th {
+            background-color: #333333; /* Ata’nın temasına uygun */
+            color: #fff;
+            font-size: 14px;
+        }
+        td {
+            color: #333;
+        }
 
-        /* Mobil uyumluluk için medya sorguları */
+        /* Mobil uyumluluk */
         @media (max-width: 600px) {
             body {
                 padding: 10px;
             }
-            h1 {
-                font-size: 18px; /* Mobil için daha küçük */
-                padding: 5px 0;
-            }
             .back-button {
-                padding: 6px 12px; /* Daha da kompakt */
-                font-size: 12px; /* Küçük ekranlar için */
+                padding: 6px 12px;
+                font-size: 12px;
                 top: 8px;
                 left: 8px;
+            }
+            table {
+                font-size: 12px;
+                overflow-x: auto; /* Yatay kaydırma için */
+                display: block;
+            }
+            th, td {
+                padding: 6px;
+                font-size: 12px;
+                min-width: 80px; /* Sütunlar mobilde daralmasın */
             }
         }
     </style>
 </head>
 <body>
     <a href="index.html" class="back-button">Geri Dön</a>
-    <h1>Burası Ata'nın Ders Programı Sayfası</h1>
+    <table>
+        <tr>
+            <th>Gün</th>
+            <th>09:30-10:20</th>
+            <th>10:30-11:20</th>
+            <th>11:30-12:20</th>
+            <th>12:30-13:20</th>
+            <th>13:30-14:20</th>
+            <th>14:30-15:20</th>
+            <th>15:30-16:20</th>
+            <th>16:30-17:20</th>
+            <th>17:30-18:20</th>
+        </tr>
+        <tr>
+            <td>Pazartesi</td>
+            <td>MATH 151</td>
+            <td>MATH 151</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>PHYS 102</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Salı</td>
+            <td>-</td>
+            <td>IE 122</td>
+            <td>IE 122</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>PHYS 102</td>
+            <td>PHYS 102</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Çarşamba</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>MATH 151</td>
+            <td>MATH 151</td>
+            <td>-</td>
+            <td>TURK 402 ONLINE</td>
+            <td>TURK 402 ONLINE</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Perşembe</td>
+            <td>-</td>
+            <td>-</td>
+            <td>MATH 151</td>
+            <td>MATH 151</td>
+            <td>CMPE 102</td>
+            <td>CMPE 102</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Cuma</td>
+            <td>CMPE 102</td>
+            <td>CMPE 102</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </table>
 </body>
 </html>
