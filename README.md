@@ -1,1 +1,0 @@
-# ders-program-3
