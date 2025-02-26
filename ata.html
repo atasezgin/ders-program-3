@@ -5,35 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobil uyumluluk için -->
     <title>Ata'nın Ders Programı</title>
     <style>
+        * {
+            box-sizing: border-box; /* Tüm elemanlarda taşma önlenir */
+        }
         body {
             margin: 0;
-            padding: 20px;
+            padding: 15px; /* Daha küçük padding */
             background-color: #000000; /* Siyah */
-            min-height: 100vh; /* Mobil için min-height kullanıyoruz */
+            min-height: 100vh; /* Mobil için esnek yükseklik */
             display: flex;
+            flex-direction: column; /* İçerik dikey sıralansın */
             justify-content: center;
             align-items: center;
             position: relative;
-            box-sizing: border-box; /* Padding taşmasını önler */
+            font-family: Arial, sans-serif; /* Daha okunaklı font */
         }
         h1 {
             color: #fff;
             text-align: center;
             margin: 0;
-            padding: 10px;
-            word-wrap: break-word; /* Uzun kelimeler mobilde kırılsın */
+            padding: 10px 0;
+            font-size: 24px; /* Varsayılan boyutta küçülttüm */
+            word-wrap: break-word; /* Uzun metinler kırılsın */
         }
         .back-button {
             position: absolute;
-            top: 20px;
-            left: 20px;
-            padding: 10px 20px;
+            top: 10px; /* Mobil için daha yakın */
+            left: 10px;
+            padding: 8px 16px; /* Daha kompakt */
             background-color: #333333;
             color: #fff;
             text-decoration: none;
-            border-radius: 15px;
-            font-size: 16px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 12px; /* Biraz daha küçük yuvarlaklık */
+            font-size: 14px; /* Mobil için uygun font */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease;
         }
         .back-button:hover {
@@ -43,17 +48,17 @@
         /* Mobil uyumluluk için medya sorguları */
         @media (max-width: 600px) {
             body {
-                padding: 10px; /* Küçük ekranlarda padding azalır */
+                padding: 10px;
             }
             h1 {
-                font-size: 18px; /* Başlık mobil için küçülür */
-                padding: 5px;
+                font-size: 18px; /* Mobil için daha küçük */
+                padding: 5px 0;
             }
             .back-button {
-                padding: 8px 15px; /* Buton küçülür */
-                font-size: 14px;
-                top: 10px; /* Üst mesafe azalır */
-                left: 10px; /* Sol mesafe azalır */
+                padding: 6px 12px; /* Daha da kompakt */
+                font-size: 12px; /* Küçük ekranlar için */
+                top: 8px;
+                left: 8px;
             }
         }
     </style>
