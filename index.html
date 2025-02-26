@@ -2,6 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobil uyumluluk için -->
     <title>Ata ve Ece'nin Ders Programı</title>
     <style>
         body {
@@ -50,6 +51,17 @@
         }
         .fade-out {
             opacity: 0;
+        }
+
+        /* Mobil uyumluluk için medya sorguları */
+        @media (max-width: 600px) {
+            .button {
+                padding: 10px 20px; /* Küçük ekranlarda buton küçülür */
+                font-size: 16px;
+            }
+            .ece-section, .ata-section {
+                height: 50%; /* Mobil için sabit kalabilir, ama esnek de yapılabilir */
+            }
         }
     </style>
 </head>
